@@ -1,15 +1,12 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Dosis } from "next/font/google";
 import "./globals.css";
+import Header from "./header"
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+const dosisLight = Dosis({
+  subsets: ['latin'],
+  weight: '500',
+  variable: '--font-dosis',
 });
 
 export const metadata: Metadata = {
@@ -25,9 +22,16 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${dosisLight.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        <div className="flex flex-col flex-1 bg-zinc-50 font-sans dark:bg-black">
+          <main className="px-100 py-25">
+            <Header />
+            {children}
+          </main>
+        </div>
+      </body>
     </html>
   );
 }

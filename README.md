@@ -1,7 +1,7 @@
-# Lyricist
-A tool for language learners to help build vocabulary, engage in culture, and create flashcards in a natural and fun way
+# Lucy Wonsower
+Lucy's personal website code
 
-## Getting Started
+## I don't know why you'd run this locally, but if you want to
 
 First, run the development server:
 
